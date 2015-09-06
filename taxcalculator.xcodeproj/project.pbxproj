@@ -12,6 +12,7 @@
 		602881B11B9BE9C40062C7AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602881B01B9BE9C40062C7AF /* ViewController.m */; };
 		602881B41B9BE9C40062C7AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602881B21B9BE9C40062C7AF /* Main.storyboard */; };
 		602881B61B9BE9C40062C7AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 602881B51B9BE9C40062C7AF /* Assets.xcassets */; };
+		60D0A7BC1B9C3E990084E57D /* MSalary.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D0A7BB1B9C3E990084E57D /* MSalary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		602881B31B9BE9C40062C7AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		602881B51B9BE9C40062C7AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		602881BA1B9BE9C40062C7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60D0A7BA1B9C3E990084E57D /* MSalary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSalary.h; sourceTree = "<group>"; };
+		60D0A7BB1B9C3E990084E57D /* MSalary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSalary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				602881B51B9BE9C40062C7AF /* Assets.xcassets */,
 				602881BA1B9BE9C40062C7AF /* Info.plist */,
 				602881A91B9BE9C40062C7AF /* Supporting Files */,
+				60D0A7BA1B9C3E990084E57D /* MSalary.h */,
+				60D0A7BB1B9C3E990084E57D /* MSalary.m */,
 			);
 			path = taxcalculator;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				602881B11B9BE9C40062C7AF /* ViewController.m in Sources */,
+				60D0A7BC1B9C3E990084E57D /* MSalary.m in Sources */,
 				602881AE1B9BE9C40062C7AF /* AppDelegate.m in Sources */,
 				602881AB1B9BE9C40062C7AF /* main.m in Sources */,
 			);

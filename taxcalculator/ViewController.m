@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "MSalary.h"
+
 typedef enum {
     TCInputTypeOriginalSalary = 1001,
     TCInputTypeBaseSheBao = 1002,
@@ -28,12 +30,12 @@ typedef enum {
 
 @property (weak, nonatomic) IBOutlet UIView *detailView;
 
-@property (weak, nonatomic) IBOutlet UILabel *grYangLLB;
-@property (weak, nonatomic) IBOutlet UILabel *grYiLLB;
-@property (weak, nonatomic) IBOutlet UILabel *grShiYLB;
-@property (weak, nonatomic) IBOutlet UILabel *grShengYLB;
-@property (weak, nonatomic) IBOutlet UILabel *grGongShLB;
-@property (weak, nonatomic) IBOutlet UILabel *grGongJJLB;
+@property (weak, nonatomic) IBOutlet UILabel *personalYangLLB;
+@property (weak, nonatomic) IBOutlet UILabel *personalYiLLB;
+@property (weak, nonatomic) IBOutlet UILabel *personalShiYLB;
+@property (weak, nonatomic) IBOutlet UILabel *personalShengYLB;
+@property (weak, nonatomic) IBOutlet UILabel *personalGongShLB;
+@property (weak, nonatomic) IBOutlet UILabel *personalGongJJLB;
 
 @property (weak, nonatomic) IBOutlet UILabel *corpYangLLB;
 @property (weak, nonatomic) IBOutlet UILabel *corpYiLLB;
@@ -49,7 +51,7 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.bgScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundTapped:)]];
+    [self.bgScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backpersonaloundTapped:)]];
     
     self.oriSalaryTF.tag = TCInputTypeOriginalSalary;
     self.baseShBTF.tag = TCInputTypeBaseSheBao;
@@ -61,13 +63,53 @@ typedef enum {
     // Dispose of any resources that can be recreated.
 }
 
-- (void)backgroundTapped:(id)sender
+- (void)backpersonaloundTapped:(id)sender
 {
     [self.view endEditing:YES];
 }
 
 - (IBAction)calculateButtonClicked:(UIButton *)sender
 {
+    CGFloat oriSalary = [self.oriSalaryTF.text doubleValue];
+    CGFloat baseShB = [self.baseShBTF.text doubleValue];
+    CGFloat baseGJJ = [self.baseGJJTF.text doubleValue];
+    
+    [self doCalculateWithBaseSalary:oriSalary baseShB:baseShB baseGJJ:baseGJJ];
+}
+
+- (void)doCalculateWithBaseSalary:(CGFloat)baseSalary baseShB:(CGFloat)baseShB baseGJJ:(CGFloat)baseGJJ
+{
+    MSalary *salary = [[MSalary alloc] init];
+    
+    salary.originalSalary = baseSalary;
+    salary.baseShB = baseShB;
+    salary.baseGJJ = baseGJJ;
+    
+    [salary doCalculate];
+    
+    
+}
+
+- (void)updateViewsWithSalary:(MSalary *)salary
+{
+    self.finalSalaryLB.text = [NSString stringWithFormat:@"%.2f", salary.finalSalary];
+    self.taxLB.text = [NSString stringWithFormat:@"%.2f", salary.tax];
+    self.sheBaoLB.text = [NSString stringWithFormat:@"%.2f", salary.totalShB];
+    
+    /*
+     @property (weak, nonatomic) IBOutlet UILabel *personalYangLLB;
+     @property (weak, nonatomic) IBOutlet UILabel *personalYiLLB;
+     @property (weak, nonatomic) IBOutlet UILabel *personalShiYLB;
+     @property (weak, nonatomic) IBOutlet UILabel *personalShengYLB;
+     @property (weak, nonatomic) IBOutlet UILabel *personalGongShLB;
+     @property (weak, nonatomic) IBOutlet UILabel *personalGongJJLB;
+     */
+    self.personalYangLLB.text = [NSString stringWithFormat:@"%.2f", salary.personalYangLLB];
+    self.personalYiLLB.text = [NSString stringWithFormat:@"%.2f", salary.personalYiLLB];
+    self.personalShiYLB.text = [NSString stringWithFormat:@"%.2f", salary.personalShiYLB];
+    self.personalShengYLB.text = [NSString stringWithFormat:@"%.2f", salary.personalShengYLB];
+    self.personalGongShLB.text = [NSString stringWithFormat:@"%.2f", salary.personalGongShLB];
+    self.personalGongJJLB.text = [NSString stringWithFormat:@"%.2f", salary.personalGongJJLB];
     
 }
 
