@@ -12,7 +12,6 @@
 		602881B11B9BE9C40062C7AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602881B01B9BE9C40062C7AF /* ViewController.m */; };
 		602881B41B9BE9C40062C7AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602881B21B9BE9C40062C7AF /* Main.storyboard */; };
 		602881B61B9BE9C40062C7AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 602881B51B9BE9C40062C7AF /* Assets.xcassets */; };
-		602881B91B9BE9C40062C7AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602881B71B9BE9C40062C7AF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		602881B01B9BE9C40062C7AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		602881B31B9BE9C40062C7AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		602881B51B9BE9C40062C7AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		602881B81B9BE9C40062C7AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		602881BA1B9BE9C40062C7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +62,6 @@
 				602881B01B9BE9C40062C7AF /* ViewController.m */,
 				602881B21B9BE9C40062C7AF /* Main.storyboard */,
 				602881B51B9BE9C40062C7AF /* Assets.xcassets */,
-				602881B71B9BE9C40062C7AF /* LaunchScreen.storyboard */,
 				602881BA1B9BE9C40062C7AF /* Info.plist */,
 				602881A91B9BE9C40062C7AF /* Supporting Files */,
 			);
@@ -136,7 +133,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				602881B91B9BE9C40062C7AF /* LaunchScreen.storyboard in Resources */,
 				602881B61B9BE9C40062C7AF /* Assets.xcassets in Resources */,
 				602881B41B9BE9C40062C7AF /* Main.storyboard in Resources */,
 			);
@@ -164,14 +160,6 @@
 				602881B31B9BE9C40062C7AF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		602881B71B9BE9C40062C7AF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				602881B81B9BE9C40062C7AF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -213,7 +201,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -251,7 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -263,6 +251,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = taxcalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maitang.taxcalculator;
@@ -274,6 +264,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = taxcalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maitang.taxcalculator;
@@ -300,6 +292,7 @@
 				602881BF1B9BE9C40062C7AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
