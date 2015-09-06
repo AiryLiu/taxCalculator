@@ -8,6 +8,8 @@
 
 #import "MSalary.h"
 
+
+
 @implementation MSalary
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
@@ -18,4 +20,20 @@
     }
     return self;
 }
+
+- (void)doCalculate
+{
+    if (self.originalSalary <= 0) {
+        return;
+    }
+    if (self.baseShB <= 0) {
+        self.baseShB = self.originalSalary;
+    }
+    if (self.baseGJJ <= 0) {
+        self.baseGJJ = self.originalSalary;
+    }
+    
+    
+}
+
 @end

@@ -96,14 +96,6 @@ typedef enum {
     self.taxLB.text = [NSString stringWithFormat:@"%.2f", salary.tax];
     self.sheBaoLB.text = [NSString stringWithFormat:@"%.2f", salary.totalShB];
     
-    /*
-     @property (weak, nonatomic) IBOutlet UILabel *personalYangLLB;
-     @property (weak, nonatomic) IBOutlet UILabel *personalYiLLB;
-     @property (weak, nonatomic) IBOutlet UILabel *personalShiYLB;
-     @property (weak, nonatomic) IBOutlet UILabel *personalShengYLB;
-     @property (weak, nonatomic) IBOutlet UILabel *personalGongShLB;
-     @property (weak, nonatomic) IBOutlet UILabel *personalGongJJLB;
-     */
     self.personalYangLLB.text = [NSString stringWithFormat:@"%.2f", salary.personalYangLLB];
     self.personalYiLLB.text = [NSString stringWithFormat:@"%.2f", salary.personalYiLLB];
     self.personalShiYLB.text = [NSString stringWithFormat:@"%.2f", salary.personalShiYLB];
@@ -111,6 +103,12 @@ typedef enum {
     self.personalGongShLB.text = [NSString stringWithFormat:@"%.2f", salary.personalGongShLB];
     self.personalGongJJLB.text = [NSString stringWithFormat:@"%.2f", salary.personalGongJJLB];
     
+    self.corpYangLLB.text = [NSString stringWithFormat:@"%.2f", salary.corpYangLLB];
+    self.corpYiLLB.text = [NSString stringWithFormat:@"%.2f", salary.corpYiLLB];
+    self.corpShiYLB.text = [NSString stringWithFormat:@"%.2f", salary.corpShiYLB];
+    self.corpShengYLB.text = [NSString stringWithFormat:@"%.2f", salary.corpShengYLB];
+    self.corpGongShLB.text = [NSString stringWithFormat:@"%.2f", salary.corpGongShLB];
+    self.corpGongJJLB.text = [NSString stringWithFormat:@"%.2f", salary.corpGongJJLB];
 }
 
 @end
