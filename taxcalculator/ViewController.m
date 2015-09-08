@@ -87,7 +87,7 @@ typedef enum {
     
     [salary doCalculate];
     
-    
+    [self updateViewsWithSalary:salary];
 }
 
 - (void)updateViewsWithSalary:(MSalary *)salary

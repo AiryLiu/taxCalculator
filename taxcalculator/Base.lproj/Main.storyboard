@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jm0-XB-bIh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jm0-XB-bIh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="EGq-Is-mjo">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="EGq-Is-mjo" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OU-s8-a5v">
@@ -592,13 +592,13 @@
                         <outlet property="corpYiLLB" destination="Fhk-Iv-dOQ" id="oPV-dL-0uX"/>
                         <outlet property="detailView" destination="zqY-7S-PuT" id="NA6-ae-Mij"/>
                         <outlet property="finalSalaryLB" destination="ozb-bT-m2V" id="lHD-IW-h1v"/>
-                        <outlet property="grGongJJLB" destination="8IX-NR-WrD" id="PX9-MU-stT"/>
-                        <outlet property="grGongShLB" destination="tVC-wb-KZM" id="hkd-NF-Lg9"/>
-                        <outlet property="grShengYLB" destination="qVC-22-IOe" id="02K-YA-WSg"/>
-                        <outlet property="grShiYLB" destination="WsQ-Xh-JfV" id="op3-OP-cEi"/>
-                        <outlet property="grYangLLB" destination="ILi-Ql-JLp" id="0lH-tQ-tIl"/>
-                        <outlet property="grYiLLB" destination="90R-ne-8Bb" id="iVm-6P-ady"/>
                         <outlet property="oriSalaryTF" destination="7EX-ZE-8q1" id="yAN-Cb-RjO"/>
+                        <outlet property="personalGongJJLB" destination="8IX-NR-WrD" id="Lx0-Jh-Lle"/>
+                        <outlet property="personalGongShLB" destination="tVC-wb-KZM" id="YGQ-hN-fLH"/>
+                        <outlet property="personalShengYLB" destination="qVC-22-IOe" id="zBP-N3-PX1"/>
+                        <outlet property="personalShiYLB" destination="WsQ-Xh-JfV" id="ENG-HL-ZZo"/>
+                        <outlet property="personalYangLLB" destination="ILi-Ql-JLp" id="7qx-9Y-Zb2"/>
+                        <outlet property="personalYiLLB" destination="90R-ne-8Bb" id="6w0-eV-QvA"/>
                         <outlet property="sheBaoLB" destination="vm9-Wk-QM9" id="CdT-c3-TQj"/>
                         <outlet property="taxLB" destination="HTg-zw-9lg" id="iUS-v1-fqp"/>
                     </connections>
