@@ -56,6 +56,11 @@
 @property (nonatomic, assign) double corpGongShLB;
 @property (nonatomic, assign) double corpGongJJLB;
 
+@property (nonatomic, assign) double taxBaseMoney;
+@property (nonatomic, strong) NSArray *taxStepArray;
+@property (nonatomic, strong) NSArray *taxRatioArray;
+@property (nonatomic, strong) NSArray *taxMinusArray;
+
 + (instancetype)bjRatio;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;

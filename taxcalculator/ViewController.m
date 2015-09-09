@@ -44,6 +44,8 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UILabel *corpGongShLB;
 @property (weak, nonatomic) IBOutlet UILabel *corpGongJJLB;
 
+@property (weak, nonatomic) IBOutlet UIButton *calculateBtn;
+
 @end
 
 @implementation ViewController
@@ -51,7 +53,7 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.bgScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backpersonaloundTapped:)]];
+    [self.bgScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundTapped:)]];
     
     self.oriSalaryTF.tag = TCInputTypeOriginalSalary;
     self.baseShBTF.tag = TCInputTypeBaseSheBao;
@@ -63,13 +65,22 @@ typedef enum {
     // Dispose of any resources that can be recreated.
 }
 
-- (void)backpersonaloundTapped:(id)sender
+- (void)backgroundTapped:(id)sender
 {
     [self.view endEditing:YES];
 }
 
 - (IBAction)calculateButtonClicked:(UIButton *)sender
 {
+    if (self.oriSalaryTF.text.length <= 0) {
+        return;
+    }
+    if (self.baseShBTF.text.length <= 0) {
+        self.baseShBTF.text = self.oriSalaryTF.text;
+    }
+    if (self.baseGJJTF.text.length <= 0) {
+        self.baseGJJTF.text = self.oriSalaryTF.text;
+    }
     CGFloat oriSalary = [self.oriSalaryTF.text doubleValue];
     CGFloat baseShB = [self.baseShBTF.text doubleValue];
     CGFloat baseGJJ = [self.baseGJJTF.text doubleValue];
@@ -92,6 +103,9 @@ typedef enum {
 
 - (void)updateViewsWithSalary:(MSalary *)salary
 {
+    self.baseShBTF.text = [NSString stringWithFormat:@"%.2f", salary.baseShB];
+    self.baseGJJTF.text = [NSString stringWithFormat:@"%.2f", salary.baseGJJ];
+    
     self.finalSalaryLB.text = [NSString stringWithFormat:@"%.2f", salary.finalSalary];
     self.taxLB.text = [NSString stringWithFormat:@"%.2f", salary.tax];
     self.sheBaoLB.text = [NSString stringWithFormat:@"%.2f", salary.totalShB];
