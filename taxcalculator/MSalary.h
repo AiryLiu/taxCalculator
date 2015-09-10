@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface MSalary : NSObject
-
+/**
+ *  薪资数据模型
+ */
 @property (nonatomic, assign) double originalSalary;
 @property (nonatomic, assign) double baseShB;
 @property (nonatomic, assign) double baseGJJ;
 
 @property (nonatomic, assign) double finalSalary;
-@property (nonatomic, assign) double totalShB;
 @property (nonatomic, assign) double tax;
 
 @property (nonatomic, assign) double personalYangLLB;
@@ -24,6 +25,7 @@
 @property (nonatomic, assign) double personalShengYLB;
 @property (nonatomic, assign) double personalGongShLB;
 @property (nonatomic, assign) double personalGongJJLB;
+@property (nonatomic, assign) double personalTotal;
 
 @property (nonatomic, assign) double corpYangLLB;
 @property (nonatomic, assign) double corpYiLLB;
@@ -31,6 +33,7 @@
 @property (nonatomic, assign) double corpShengYLB;
 @property (nonatomic, assign) double corpGongShLB;
 @property (nonatomic, assign) double corpGongJJLB;
+@property (nonatomic, assign) double corpTotal;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

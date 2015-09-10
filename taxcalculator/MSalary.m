@@ -65,9 +65,12 @@ static double const minGJJBJ = 1720;
     self.corpShiYLB = lowBaseShB * bjRatio.corpShiYLB;
     self.corpGongJJLB = baseGJJ * bjRatio.corpGongJJLB;
     
-    self.totalShB = self.personalYangLLB + self.personalYiLLB + self.personalShiYLB + self.personalShengYLB + self.personalGongShLB + self.personalGongJJLB;
-    self.tax = [self calculateTax:self.originalSalary-self.totalShB taxBaseMoney:bjRatio.taxBaseMoney taxStepArray:bjRatio.taxStepArray taxRatioArray:bjRatio.taxRatioArray taxMinusArray:bjRatio.taxMinusArray];
-    self.finalSalary = self.originalSalary-self.totalShB-self.tax;
+//    self.totalShB = self.personalYangLLB + self.personalYiLLB + self.personalShiYLB + self.personalShengYLB + self.personalGongShLB + self.personalGongJJLB;
+    self.personalTotal = self.personalYangLLB + self.personalYiLLB + self.personalShiYLB + self.personalShengYLB + self.personalGongShLB + self.personalGongJJLB;
+    self.corpTotal = self.corpYangLLB + self.corpYiLLB + self.corpShiYLB + self.corpShengYLB + self.corpGongShLB + self.corpGongJJLB;
+    
+    self.tax = [self calculateTax:self.originalSalary-self.personalTotal taxBaseMoney:bjRatio.taxBaseMoney taxStepArray:bjRatio.taxStepArray taxRatioArray:bjRatio.taxRatioArray taxMinusArray:bjRatio.taxMinusArray];
+    self.finalSalary = self.originalSalary-self.personalTotal-self.tax;
 }
 
 - (double)calculateMoney:(double)money ratio:(double)ratio minMoney:(double)minMoney maxMoney:(double)maxMoney
@@ -107,21 +110,6 @@ static double const minGJJBJ = 1720;
 @end
 
 @implementation MRatio
-/*
- @property (nonatomic, assign) double personalYangLLB;
- @property (nonatomic, assign) double personalYiLLB;
- @property (nonatomic, assign) double personalShiYLB;
- @property (nonatomic, assign) double personalShengYLB;
- @property (nonatomic, assign) double personalGongShLB;
- @property (nonatomic, assign) double personalGongJJLB;
- 
- @property (nonatomic, assign) double corpYangLLB;
- @property (nonatomic, assign) double corpYiLLB;
- @property (nonatomic, assign) double corpShiYLB;
- @property (nonatomic, assign) double corpShengYLB;
- @property (nonatomic, assign) double corpGongShLB;
- @property (nonatomic, assign) double corpGongJJLB;
- */
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {

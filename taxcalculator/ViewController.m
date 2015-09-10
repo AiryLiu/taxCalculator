@@ -36,6 +36,7 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UILabel *personalShengYLB;
 @property (weak, nonatomic) IBOutlet UILabel *personalGongShLB;
 @property (weak, nonatomic) IBOutlet UILabel *personalGongJJLB;
+@property (weak, nonatomic) IBOutlet UILabel *personalTotalLB;
 
 @property (weak, nonatomic) IBOutlet UILabel *corpYangLLB;
 @property (weak, nonatomic) IBOutlet UILabel *corpYiLLB;
@@ -43,6 +44,7 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UILabel *corpShengYLB;
 @property (weak, nonatomic) IBOutlet UILabel *corpGongShLB;
 @property (weak, nonatomic) IBOutlet UILabel *corpGongJJLB;
+@property (weak, nonatomic) IBOutlet UILabel *corpTotalLB;
 
 @property (weak, nonatomic) IBOutlet UIButton *calculateBtn;
 
@@ -108,7 +110,7 @@ typedef enum {
     
     self.finalSalaryLB.text = [NSString stringWithFormat:@"%.2f", salary.finalSalary];
     self.taxLB.text = [NSString stringWithFormat:@"%.2f", salary.tax];
-    self.sheBaoLB.text = [NSString stringWithFormat:@"%.2f", salary.totalShB];
+    self.sheBaoLB.text = [NSString stringWithFormat:@"%.2f", salary.personalTotal];
     
     self.personalYangLLB.text = [NSString stringWithFormat:@"%.2f", salary.personalYangLLB];
     self.personalYiLLB.text = [NSString stringWithFormat:@"%.2f", salary.personalYiLLB];
